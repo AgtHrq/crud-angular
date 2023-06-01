@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id" : 1,
+            "name": "Bola Azul",
+            "price": "10.38"
+        },
+        {
+            "id" : 2,
+            "name": "Iphone 12",
+            "price": "2000.12"
+        },
+        {
+            "id" : 3,
+            "name": "Geladeira",
+            "price": "1000.0"
+        }
+    ]
+}
