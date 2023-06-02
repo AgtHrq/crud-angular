@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.w-100{
+    width: 100%;  
+}
+
+.v-middle { 
+    vertical-align: middle;
+   /*  border: 1px solid; */
+    padding: 0px;
+}
+
+.v-baseline { 
+    vertical-align: baseline;
+    /* border: 1px solid; */
+    padding: 0px;
+   
+}
+
+.v-bottom { 
+    vertical-align: text-bottom;
+   /*  border: 1px solid; */
+    padding: 0px;
+}
+
+ .d-flex-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+}
+
+.d-flex-baseline{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: fit-content;
+}
+
+.border{
+    /* border: 1px solid */
+}
+
+.color-red{
+    color: #f00;
+}

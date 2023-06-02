@@ -1,0 +1,19 @@
+.footer{
+    position: fixed;
+    bottom: 0px;
+}
+.icon-heart{
+    text-align: center; 
+    font-size: 17px;
+   /*  border: 1px solid; */
+    height: auto;
+    width: auto;
+}
+
+.moldura-footer{
+    width: 100%; 
+    display: flex; 
+    justify-content: end; 
+    font-size: 15px;
+}
+
