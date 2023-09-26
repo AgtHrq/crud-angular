@@ -7,11 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-crud.component.css']
 })
 export class ProductCrudComponent {
-  constructor(private router: Router){
-
+  constructor(private router: Router) {
   }
   navigateToProductCreate(): void {
-    // alert('Erro ao clicar')
     this.router.navigate(['/products/create'])
   }
 } 
