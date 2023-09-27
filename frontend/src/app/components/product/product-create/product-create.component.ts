@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ProductService} from "./product.service";
+import {ProductService} from "../product.service";
 import {Router} from "@angular/router";
 import {ProductModel} from "./product.model";
 
@@ -11,8 +11,8 @@ import {ProductModel} from "./product.model";
 export class ProductCreateComponent {
 
     product: ProductModel = {
-        name: 'Geladeria',
-        price: 200
+        name: "",
+        price: 0
     }
     constructor(private productService: ProductService,
                 private router: Router) {
