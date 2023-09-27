@@ -13,11 +13,13 @@ export class ProductCreatComponent {
     name: 'Notebook',
     price: 4000
   }
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private router: Router) { }
 
   createProduct(): void {
     this.productService.create(this.product).subscribe(() => {
       this.productService.showMessage('Produto criado com sucesso!');
+      this.product.name = ""
+      this.product.price = 0
     })
   }
 
