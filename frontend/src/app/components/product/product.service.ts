@@ -23,11 +23,19 @@ export class ProductService {
         })
     }
 
-    create(product: ProductModel) : Observable<ProductModel> {
+    create(product: ProductModel): Observable<ProductModel> {
         return this.http.post<ProductModel>(this.baseUrl, product);
     }
 
     read(): Observable<ProductModel[]> {
         return this.http.get<ProductModel[]>(this.baseUrl);
+    }
+
+    readById(id: number): Observable<ProductModel> {
+        return this.http.get<ProductModel>(`${this.baseUrl}/${id}`);
+    }
+
+    update(product: ProductModel): Observable<ProductModel> {
+        return this.http.put<ProductModel>(`${this.baseUrl}/${product.id}`, product);
     }
 }

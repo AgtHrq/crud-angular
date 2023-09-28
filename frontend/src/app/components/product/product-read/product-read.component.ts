@@ -10,6 +10,7 @@ import {ProductModel} from "../product-create/product.model";
 export class ProductReadComponent {
 
     products: ProductModel[] = [];
+    displayedColumns = ['id', 'name', 'price', 'action'];
 
     constructor(private productService: ProductService) {
         this.productService.read().subscribe(products => {
