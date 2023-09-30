@@ -1,0 +1,20 @@
+mat-card {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+mat-card-title{
+    margin-bottom: 1rem;
+}
+
+.edit {
+    margin-right: 1rem;
+}
+
+.edit > i{
+    color: #d9cd26;
+}
+
+.delete > i {
+    color: #e35e6b;
+}

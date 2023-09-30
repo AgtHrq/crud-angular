@@ -1,7 +1,9 @@
+
 <mat-card>
     <div class = form-container>
         <form>
-            <mat-card-title>Novo Produto</mat-card-title>
+            <mat-card-title>Atualizar Produto</mat-card-title>
+            <p>Id do Produto: {{product.id}}</p>
             <mat-form-field>
                 <input matInput placeholder="Nome do Produto" [(ngModel)]="product.name" name="name">
             </mat-form-field>
@@ -10,9 +12,8 @@
             </mat-form-field>
         </form>
     
-        <button mat-raised-button color="primary" (click)="createProduct()">Salvar</button>
+        <button mat-raised-button color="primary" (click)="updateProduct()">Salvar</button>
         <button mat-raised-button (click)="cancel()">Cancelar</button>
     </div>
     
 </mat-card>
-

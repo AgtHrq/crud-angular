@@ -1,0 +1,14 @@
+<mat-card class = delete-container>
+    <div class = delete-produto>
+        <mat-card-title>Remover o Produto?</mat-card-title>
+        
+        <mat-card-content> ID : {{product.id}}</mat-card-content>
+        <mat-card-content> Produto: {{product.name}} </mat-card-content>
+        <mat-card-content> Preço : {{product.price}}</mat-card-content>
+    </div>
+    <div class="botoes">
+        <button mat-raised-button color="primary" (click)="deleteProduct()">Remover</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+
+</mat-card>
