@@ -3,10 +3,12 @@
         <form>
             <mat-card-title>Novo Produto</mat-card-title>
             <mat-form-field>
-                <input matInput placeholder="Nome" name="name" [(ngModel)]="product.name">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Digite o produto" name="name" [(ngModel)]="product.name">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Preço (R$)" name="price" [(ngModel)]="product.price">
+                <mat-label>Preço (R$)</mat-label>
+                <input matInput placeholder="Digite o preço" name="price" [(ngModel)]="product.price">
             </mat-form-field>
         </form>
 

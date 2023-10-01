@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../product.service";
 import {ProductModel} from "../product-create/product.model";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
     templateUrl: './product-update.component.html',
     styleUrls: ['./product-update.component.css']
 })
-export class ProductUpdateComponent {
+export class ProductUpdateComponent implements OnInit {
 
     product: ProductModel = {
         name: "",
@@ -18,7 +18,9 @@ export class ProductUpdateComponent {
     constructor(private productService: ProductService,
                 private route: ActivatedRoute,
                 private router: Router) {
+    }
 
+    ngOnInit(): void {
         const id = this.route.snapshot.paramMap.get('id');
         this.productService.readById(Number(id))
             .subscribe(product => {

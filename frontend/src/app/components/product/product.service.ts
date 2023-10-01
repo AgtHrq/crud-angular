@@ -38,4 +38,8 @@ export class ProductService {
     update(product: ProductModel): Observable<ProductModel> {
         return this.http.put<ProductModel>(`${this.baseUrl}/${product.id}`, product);
     }
+
+    delete(id: number): Observable<ProductModel> {
+        return this.http.delete<ProductModel>(`${this.baseUrl}/${id}`);
+    }
 }

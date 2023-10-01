@@ -10,17 +10,15 @@ import {ProductModel} from "./product.model";
 })
 export class ProductCreateComponent {
 
-    product: ProductModel = {
-        name: "",
-        price: 0
-    }
+    product = {} as ProductModel;
+
     constructor(private productService: ProductService,
                 private router: Router) {
     }
 
     createProduct(): void {
         this.productService.create(this.product).subscribe(() => {
-            this.productService.showMessage('Produto criado com sucesso!')
+            this.productService.showMessage('Produto criado com sucesso!');
         });
     }
 
