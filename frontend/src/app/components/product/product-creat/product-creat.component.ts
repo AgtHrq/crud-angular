@@ -9,18 +9,38 @@ import { Product } from './product.model';
   styleUrls: ['./product-creat.component.css']
 })
 export class ProductCreatComponent {
-  product: Product = {
-    name: 'Notebook',
-    price: 4000
+  product: Product
+  constructor(private productService: ProductService, private router: Router) { 
+    this.product = {
+      name: "",
+      price: 0
+    }
   }
-  constructor(private productService: ProductService, private router: Router) { }
 
   createProduct(): void {
+
+    if(this.anyErrors()){
+      return
+    }
     this.productService.create(this.product).subscribe(() => {
       this.productService.showMessage('Produto criado com sucesso!');
       this.product.name = ""
       this.product.price = 0
+      this.router.navigate(['/products'])
     })
+  }
+
+  anyErrors(): boolean {
+    if(this.product.name == ""){
+      this.productService.showMessage('Necessário adicionar nome ao produto.')
+      return true
+    }
+
+    if(this.product.price == 0){
+      this.productService.showMessage('Necessário adicionar preço ao produto')
+      return true
+    }
+    return false
   }
 
   cancel(): void {

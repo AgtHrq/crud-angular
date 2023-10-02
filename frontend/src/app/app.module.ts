@@ -11,12 +11,12 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreatComponent } from './components/product/product-creat/product-creat.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSnackBarModule} from '@angular/material/snack-bar'
-import {HttpClientModule} from '@angular/common/http'
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { HttpClientModule } from '@angular/common/http'
 
 import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -31,6 +31,9 @@ import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
+import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+
 registerLocaleData(localePt)
 
 @NgModule({
@@ -44,7 +47,8 @@ registerLocaleData(localePt)
     ProductCreatComponent,
     ProductReadComponent,
     ProductRead2Component,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,8 @@ registerLocaleData(localePt)
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatTooltipModule
   ],
   providers: [{
     provide: LOCALE_ID,
