@@ -26,11 +26,5 @@ export class ProductReadComponent implements OnInit {
             });
     }
 
-    deleteProduct(id: number) {
-        this.productService.delete(id)
-            .subscribe(() => {
-                this.refresh();
-                this.productService.showMessage("Produto removido com sucesso!")
-            });
-    }
+
 }

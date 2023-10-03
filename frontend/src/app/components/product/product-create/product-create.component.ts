@@ -17,12 +17,28 @@ export class ProductCreateComponent {
     }
 
     createProduct(): void {
+       if (this.isValidFields()) {
+           return;
+       }
         this.productService.create(this.product).subscribe(() => {
             this.productService.showMessage('Produto criado com sucesso!');
+            this.router.navigate(['products']);
         });
     }
 
     cancel(): void {
         this.router.navigate(['products']);
+    }
+
+    isValidFields(): boolean {
+        if (this.product.name == null) {
+            this.productService.showMessage("O campo nome não de ve ser vazio")
+            return true;
+        }
+        if (this.product.price == null) {
+            this.productService.showMessage("O campo preço não de ve ser vazio")
+            return true;
+        }
+        return false;
     }
 }

@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {HttpClient} from "@angular/common/http";
 import {ProductModel} from "./product-create/product.model";
-import {Observable} from "rxjs";
+import {catchError, EMPTY, Observable} from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -24,7 +24,10 @@ export class ProductService {
     }
 
     create(product: ProductModel): Observable<ProductModel> {
-        return this.http.post<ProductModel>(this.baseUrl, product);
+        return this.http.post<ProductModel>(this.baseUrl, product)
+            .pipe(
+
+            );
     }
 
     read(): Observable<ProductModel[]> {
@@ -39,7 +42,12 @@ export class ProductService {
         return this.http.put<ProductModel>(`${this.baseUrl}/${product.id}`, product);
     }
 
-    delete(id: number): Observable<ProductModel> {
+    delete(id: number | undefined): Observable<ProductModel> {
         return this.http.delete<ProductModel>(`${this.baseUrl}/${id}`);
+    }
+
+    errorHandle(e: any): Observable<any> {
+        this.showMessage("Ocorreu um erro!");
+        return EMPTY;
     }
 }

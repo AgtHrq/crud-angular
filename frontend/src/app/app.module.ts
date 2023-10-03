@@ -28,6 +28,8 @@ import {MatTableModule} from "@angular/material/table";
 import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from "@angular/common";
 import {ProductUpdateComponent} from "./components/product/product-update/product-update.component";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
 registerLocaleData(localePt);
 
@@ -42,7 +44,8 @@ registerLocaleData(localePt);
         ProductCrudComponent,
         ProductCreateComponent,
         ProductReadComponent,
-        ProductUpdateComponent
+        ProductUpdateComponent,
+        ProductDeleteComponent
     ],
     imports: [
         BrowserModule,
@@ -60,7 +63,8 @@ registerLocaleData(localePt);
         MatInputModule,
         MatPaginatorModule,
         MatSortModule,
-        MatTableModule
+        MatTableModule,
+        MatTooltipModule
     ],
     providers: [
         {provide: LOCALE_ID, useValue: 'pt' }

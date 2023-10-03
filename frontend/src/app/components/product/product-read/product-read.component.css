@@ -9,3 +9,7 @@
 .delete > i {
  color: #e35E6b;
 }
+
+a {
+    cursor: pointer;
+}
