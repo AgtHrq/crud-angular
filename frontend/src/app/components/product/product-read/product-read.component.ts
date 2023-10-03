@@ -20,11 +20,4 @@ export class ProductReadComponent implements OnInit {
       console.log(products)
     })
   }
-
-  deleteProduct(id: number){
-    this.productService.delete(id).subscribe(product => {
-      this.productService.showMessage("Produto excluído com sucesso.")
-      this.ngOnInit()
-    })
-  }
 }
