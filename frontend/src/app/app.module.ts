@@ -64,7 +64,8 @@ registerLocaleData(localePt);
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatPaginatorModule
     ],
     providers: [
         {provide: LOCALE_ID, useValue: 'pt' }
