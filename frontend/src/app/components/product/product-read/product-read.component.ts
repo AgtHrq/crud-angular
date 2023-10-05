@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Product } from '../product-creat/product.model';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-product-read',
@@ -10,6 +12,8 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class ProductReadComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+  dataSource = new MatTableDataSource<Product>();
   products: Product[] = []
   displayedColumns = ['id', 'name', 'price', 'action'];
 
@@ -20,5 +24,10 @@ export class ProductReadComponent implements OnInit {
       this.products = products
       console.log(products)
     })
+  }
+
+  applyFilter(event: any): void {
+    const filterValue = event.target.value
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
