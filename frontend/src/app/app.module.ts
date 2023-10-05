@@ -30,6 +30,7 @@ import {registerLocaleData} from "@angular/common";
 import {ProductUpdateComponent} from "./components/product/product-update/product-update.component";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { UserCrudComponent } from './views/user-crud/user-crud.component';
 
 registerLocaleData(localePt);
 
@@ -45,7 +46,8 @@ registerLocaleData(localePt);
         ProductCreateComponent,
         ProductReadComponent,
         ProductUpdateComponent,
-        ProductDeleteComponent
+        ProductDeleteComponent,
+        UserCrudComponent
     ],
     imports: [
         BrowserModule,
