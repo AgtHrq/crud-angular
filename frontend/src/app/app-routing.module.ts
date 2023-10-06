@@ -6,6 +6,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import {ProductUpdateComponent} from "./components/product/product-update/product-update.component";
 import {ProductDeleteComponent} from "./components/product/product-delete/product-delete.component";
 import {UserCrudComponent} from "./views/user-crud/user-crud.component";
+import {UserCreateComponent} from "./components/user/user-create/user-create.component";
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: "products/create", component: ProductCreateComponent},
   {path: "products/update/:id", component: ProductUpdateComponent},
   {path: "products/delete/:id", component: ProductDeleteComponent},
-  {path: "users", component: UserCrudComponent}
+  {path: "users", component: UserCrudComponent},
+  {path: "users/create", component: UserCreateComponent}
 ];
 
 @NgModule({

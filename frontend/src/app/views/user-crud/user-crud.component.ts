@@ -16,4 +16,9 @@ export class UserCrudComponent {
             routeUrl: "users"
         }
     }
+
+    navigateToUserCreate() {
+        this.router.navigate(["users/create"])
+    }
+
 }

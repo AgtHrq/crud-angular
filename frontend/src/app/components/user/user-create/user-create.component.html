@@ -1,0 +1,34 @@
+<mat-card>
+    <div class="form-container">
+        <form>
+            <mat-card-title>Novo Usuário</mat-card-title>
+            <mat-form-field>
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Digite o nome" name="name" [(ngModel)]="user.nome">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>RG</mat-label>
+                <input matInput placeholder="Digite o RG" name="rg" [(ngModel)]="user.rg">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>CPF</mat-label>
+                <input matInput placeholder="Digite o CPF" name="cpf" [(ngModel)]="user.cpf">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Renda Anual</mat-label>
+                <input matInput placeholder="Digite a renda anual" name="rendaAnual" [(ngModel)]="user.rendaAnual">
+            </mat-form-field>
+        </form>
+
+        <button mat-raised-button
+                color="primary"
+                (click)="createUser()">
+            Salvar
+        </button>
+
+        <button mat-raised-button
+                (click)="cancel()">
+            Cancelar
+        </button>
+    </div>
+</mat-card>
