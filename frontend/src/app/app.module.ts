@@ -39,6 +39,11 @@ import { UserReadComponent } from './components/user/user-read/user-read.compone
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view.component';
+
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component'
+import {MatSelectModule} from '@angular/material/select';
 
 registerLocaleData(localePt)
 
@@ -59,7 +64,9 @@ registerLocaleData(localePt)
     UserCreateComponent,
     UserReadComponent,
     UserDeleteComponent,
-    UserUpdateComponent
+    UserUpdateComponent,
+    FinanceiroViewComponent,
+    ContaCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +86,9 @@ registerLocaleData(localePt)
     MatPaginatorModule,
     MatSortModule,
     MatTooltipModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatExpansionModule,
+    MatSelectModule
   ],
   providers: [{
     provide: LOCALE_ID,

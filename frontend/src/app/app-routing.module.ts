@@ -9,6 +9,8 @@ import { UserCrudComponent } from './views/user-crud/user-crud.component';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
+import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view.component';
+import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component';
 
 const routes: Routes = [{
   path: "",
@@ -45,6 +47,14 @@ const routes: Routes = [{
 {
   path: "users/delete/:id",
   component: UserDeleteComponent
+},
+{
+  path: "financeiro",
+  component: FinanceiroViewComponent
+},
+{
+  path: "financeiro/conta/create",
+  component: ContaCreateComponent
 },
 ];
 

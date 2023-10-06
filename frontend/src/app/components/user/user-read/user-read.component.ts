@@ -34,8 +34,12 @@ export class UserReadComponent implements OnInit {
   }
 
   alterarEstadoBloqueio(user: User): void {
-    this.userService.alterarEstadoBloqueio(user).subscribe(user => {
-      console.log(user)
+    this.userService.alterarEstadoBloqueio(user).subscribe(bloqueado => {
+      this.dataSource.data.forEach(userFromList => {
+        if(userFromList.id == user.id){
+          userFromList.bloqueado = bloqueado.body
+        }
+      })
     })
   }
 

@@ -38,6 +38,10 @@ export class UserService {
     return this.http.get<User[]>(`${this.baseUrl}/all`)
   }
 
+  readById(id: number): Observable<User> {
+    return this.http.get<User>(`${this.baseUrl}/usuario-${id}`)
+  }
+
   errorHandler(e: any): Observable<any> {
     this.showMessage(e.error.detalhes[0]);
     console.log(e)
@@ -45,12 +49,12 @@ export class UserService {
   }
 
   update(user: User): Observable<User> {
-    const url = `${this.baseUrl}/${user.id}`
+    const url = `${this.baseUrl}`
     return this.http.put<User>(url, user)
   }
 
   delete(id: number): Observable<User> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}?id=${id}`
     return this.http.delete<User>(url)
   }
 

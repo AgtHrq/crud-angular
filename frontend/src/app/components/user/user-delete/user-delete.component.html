@@ -1,1 +1,22 @@
-<p>user-delete works!</p>
+<mat-card>
+    <div class="form-container">
+        <form>
+            <mat-card-title>Excluir Usuário</mat-card-title>
+            <mat-form-field>
+                <input matInput placeholder="Nome" [(ngModel)]="user.nome" disabled name="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Rg" [(ngModel)]="user.rg" disabled name="rg">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Cpf" [(ngModel)]="user.cpf" disabled name="cpf">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Renda Anual" [(ngModel)]="user.rendaAnual" disabled name="rendaAnual">
+            </mat-form-field>
+        </form>
+    
+        <button mat-raised-button color="warn" (click)="deleteUser()">Excluir</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+</mat-card>
