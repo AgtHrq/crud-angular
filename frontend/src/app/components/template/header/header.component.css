@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 .header{
+=======
+.header {
+>>>>>>> main
     display: flex;
     align-items: center;
 }
 
+<<<<<<< HEAD
 .header a{
+=======
+.header a {
+>>>>>>> main
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -13,10 +21,19 @@
     max-height: 100px;
 }
 
+<<<<<<< HEAD
 .title-group{
     padding-left:25px;
 }
 
 .title-group i{
     padding-right:5px;
+=======
+.title-group {
+    padding-left: 25px;
+}
+
+.title-group i {
+    padding-right: 5px;
+>>>>>>> main
 }
