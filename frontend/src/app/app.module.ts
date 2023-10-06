@@ -34,6 +34,11 @@ import { ProductUpdateComponent } from './components/product/product-update/prod
 import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
+import { UserCreateComponent } from './components/user/user-create/user-create.component';
+import { UserReadComponent } from './components/user/user-read/user-read.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 
 registerLocaleData(localePt)
 
@@ -50,7 +55,11 @@ registerLocaleData(localePt)
     ProductRead2Component,
     ProductUpdateComponent,
     ProductDeleteComponent,
-    UserCrudComponent
+    UserCrudComponent,
+    UserCreateComponent,
+    UserReadComponent,
+    UserDeleteComponent,
+    UserUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +78,8 @@ registerLocaleData(localePt)
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSlideToggleModule
   ],
   providers: [{
     provide: LOCALE_ID,
