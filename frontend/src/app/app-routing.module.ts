@@ -7,6 +7,10 @@ import {ProductUpdateComponent} from "./components/product/product-update/produc
 import {ProductDeleteComponent} from "./components/product/product-delete/product-delete.component";
 import {UserCrudComponent} from "./views/user-crud/user-crud.component";
 import {UserCreateComponent} from "./components/user/user-create/user-create.component";
+import {ContaCreateComponent} from "./components/financeiro/conta/conta-create/conta-create.component";
+import {UserDeleteComponent} from "./components/user/user-delete/user-delete.component";
+import {UserUpdateComponent} from "./components/user/user-update/user-update.component";
+import {FinanceiroViewComponent} from "./views/financeiro-view/financeiro-view.component";
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -15,7 +19,11 @@ const routes: Routes = [
   {path: "products/update/:id", component: ProductUpdateComponent},
   {path: "products/delete/:id", component: ProductDeleteComponent},
   {path: "users", component: UserCrudComponent},
-  {path: "users/create", component: UserCreateComponent}
+  {path: "users/create", component: UserCreateComponent},
+  {path: "users/update/:id", component: UserUpdateComponent},
+  {path: "users/delete/:id", component: UserDeleteComponent},
+  {path: "financeiro", component: FinanceiroViewComponent},
+  {path: "financeiro/conta/create", component: ContaCreateComponent}
 ];
 
 @NgModule({

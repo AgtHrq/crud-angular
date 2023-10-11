@@ -1,0 +1,24 @@
+<mat-card>
+    <div class="form-container">
+        <form>
+            <mat-card-title>Nova Conta</mat-card-title>
+            <mat-form-field>
+                <mat-label>Usuário</mat-label>
+                <mat-select [(ngModel)]="conta.idUsuario" name="food">
+                    <mat-option *ngFor="let user of usersSelect" [value]="user.value">
+                        {{user.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Número da Agência" [(ngModel)]="conta.numAgencia" name="numeroAgencia">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Número da Conta" [(ngModel)]="conta.numConta" name="numeroConta">
+            </mat-form-field>
+        </form>
+
+        <button mat-raised-button color="primary" (click)="createConta()">Salvar</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+</mat-card>

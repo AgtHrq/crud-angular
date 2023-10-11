@@ -1,0 +1,22 @@
+<mat-card>
+    <div class="form-container">
+        <form>
+            <mat-card-title>Atualizar Usuário</mat-card-title>
+            <mat-form-field>
+                <input matInput placeholder="Nome" [(ngModel)]="user.nome" name="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Rg" [(ngModel)]="user.rg" name="rg">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Cpf" [(ngModel)]="user.cpf" name="cpf">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Renda Anual" [(ngModel)]="user.rendaAnual" name="rendaAnual">
+            </mat-form-field>
+        </form>
+    
+        <button mat-raised-button color="primary" (click)="updateUser()">Atualizar</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+</mat-card>

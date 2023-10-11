@@ -21,7 +21,11 @@ export class UserReadComponent {
     dataSource = new MatTableDataSource<User>();
 
     constructor(private userService: UserService) {
-        this.userService.read()
+       this.refresh();
+    }
+
+    refresh() {
+        this.userService.readAll()
             .subscribe(users => {
                 this.dataSource.data = users;
                 this.dataSource.paginator = this.paginator;
@@ -29,10 +33,16 @@ export class UserReadComponent {
             })
     }
 
-    alteraEstadoBloqueio(id: number, bloqueado: MatSlideToggleChange) {
-        this.userService.update(id, bloqueado.checked).subscribe(() => {
+    updateEstadoBloqueio(id: number, bloqueado: MatSlideToggleChange) {
+        this.userService.updateEstadoBloqueio(id, bloqueado.checked).subscribe(() => {
+            this.refresh();
             let b = bloqueado.checked ? "bloqueado" : "desbloqueado";
             this.userService.showMessage(`Usuário ${b}.`)
         })
+    }
+
+    applyFilter(event: any): void {
+        const filterValue = event.target.value;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
     }
 }

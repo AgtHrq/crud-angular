@@ -34,6 +34,12 @@ import { UserCrudComponent } from './views/user-crud/user-crud.component';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
 import { UserReadComponent } from './components/user/user-read/user-read.component';
 import {MatSlideToggle, MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view.component';
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatSelectModule} from "@angular/material/select";
+import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component';
+import {UserDeleteComponent} from "./components/user/user-delete/user-delete.component";
+import {UserUpdateComponent} from "./components/user/user-update/user-update.component";
 
 registerLocaleData(localePt);
 
@@ -52,7 +58,11 @@ registerLocaleData(localePt);
         ProductDeleteComponent,
         UserCrudComponent,
         UserCreateComponent,
-        UserReadComponent
+        UserDeleteComponent,
+        UserReadComponent,
+        UserUpdateComponent,
+        FinanceiroViewComponent,
+        ContaCreateComponent
     ],
     imports: [
         BrowserModule,
@@ -73,7 +83,9 @@ registerLocaleData(localePt);
         MatTableModule,
         MatTooltipModule,
         MatPaginatorModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatExpansionModule,
+        MatSelectModule
     ],
     providers: [
         {provide: LOCALE_ID, useValue: 'pt' }

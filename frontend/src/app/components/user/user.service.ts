@@ -31,11 +31,25 @@ export class UserService {
             );
     }
 
-    read(): Observable<User[]> {
+    readAll(): Observable<User[]> {
         return this.http.get<User[]>(`${this.baseUrl}/all`)
     }
 
-    update(id: number, bloqueado: boolean): Observable<User> {
+    readById(id: number): Observable<User> {
+        return this.http.get<User>(`${this.baseUrl}/usuario-${id}`)
+    }
+
+    update(user: User): Observable<User> {
+        const url = `${this.baseUrl}`
+        return this.http.put<User>(url, user)
+    }
+
+    delete(id: number): Observable<User> {
+        const url = `${this.baseUrl}?id=${id}`
+        return this.http.delete<User>(url)
+    }
+
+    updateEstadoBloqueio(id: number, bloqueado: boolean): Observable<User> {
         const params = {bloqueado: bloqueado, id: id}
 
         return this.http
@@ -43,7 +57,7 @@ export class UserService {
     }
 
     errorHandle(e: any): Observable<any> {
-        this.showMessage(e.data.detalhes[1]);
+        this.showMessage(e.data);
         return EMPTY;
     }
 }
