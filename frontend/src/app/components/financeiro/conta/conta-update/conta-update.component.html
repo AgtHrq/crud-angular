@@ -1,0 +1,18 @@
+<mat-card>
+    <div class="form-container">
+        <form>
+            <mat-card-title>Editar Conta</mat-card-title>
+            <mat-form-field>
+                <mat-label>Número da Agência</mat-label>
+                <input matInput placeholder="Número da Agência" [(ngModel)]="conta.numAgencia" name="numAgencia">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Número da Conta</mat-label>
+                <input matInput placeholder="Número da Conta" [(ngModel)]="conta.numConta" name="numConta">
+            </mat-form-field>
+        </form>
+
+        <button mat-raised-button color="primary" (click)="updateConta()">Editar</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+</mat-card>

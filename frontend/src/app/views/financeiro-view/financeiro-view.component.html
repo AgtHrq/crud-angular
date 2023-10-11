@@ -9,7 +9,9 @@
             </mat-panel-description>
         </mat-expansion-panel-header>
         <button mat-raised-button color="primary" (click)="navigateToAddConta()">Nova Conta</button>
+        <app-conta-read />
     </mat-expansion-panel>
+
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
@@ -30,6 +32,6 @@
                 histório com todas as transações do sistem.
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>
+       <app-historico-transacoes />
     </mat-expansion-panel>
 </mat-accordion>

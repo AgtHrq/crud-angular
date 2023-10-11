@@ -8,6 +8,7 @@ import {HeaderService} from "../../components/template/header/header.service";
   styleUrls: ['./financeiro-view.component.css']
 })
 export class FinanceiroViewComponent {
+
   panelOpenState = false;
 
   constructor(private headerService: HeaderService, private router: Router){

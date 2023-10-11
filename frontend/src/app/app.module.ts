@@ -29,17 +29,23 @@ import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from "@angular/common";
 import {ProductUpdateComponent} from "./components/product/product-update/product-update.component";
 import {MatTooltipModule} from "@angular/material/tooltip";
-import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
-import { UserCrudComponent } from './views/user-crud/user-crud.component';
-import { UserCreateComponent } from './components/user/user-create/user-create.component';
-import { UserReadComponent } from './components/user/user-read/user-read.component';
-import {MatSlideToggle, MatSlideToggleModule} from "@angular/material/slide-toggle";
-import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view.component';
+import {ProductDeleteComponent} from './components/product/product-delete/product-delete.component';
+import {UserCrudComponent} from './views/user-crud/user-crud.component';
+import {UserCreateComponent} from './components/user/user-create/user-create.component';
+import {UserReadComponent} from './components/user/user-read/user-read.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {FinanceiroViewComponent} from './views/financeiro-view/financeiro-view.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatSelectModule} from "@angular/material/select";
-import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component';
+import {ContaCreateComponent} from './components/financeiro/conta/conta-create/conta-create.component';
 import {UserDeleteComponent} from "./components/user/user-delete/user-delete.component";
 import {UserUpdateComponent} from "./components/user/user-update/user-update.component";
+import {ContaUpdateComponent} from './components/financeiro/conta/conta-update/conta-update.component';
+import {ContaReadComponent} from './components/financeiro/conta/conta-read/conta-read.component';
+import {ContaDeleteComponent} from './components/financeiro/conta/conta-delete/conta-delete.component';
+import {
+    HistoricoTransacoesComponent
+} from './components/financeiro/historico-transacoes/historico-transacoes.component';
 
 registerLocaleData(localePt);
 
@@ -62,7 +68,11 @@ registerLocaleData(localePt);
         UserReadComponent,
         UserUpdateComponent,
         FinanceiroViewComponent,
-        ContaCreateComponent
+        ContaCreateComponent,
+        ContaUpdateComponent,
+        ContaReadComponent,
+        ContaDeleteComponent,
+        HistoricoTransacoesComponent
     ],
     imports: [
         BrowserModule,
@@ -88,7 +98,7 @@ registerLocaleData(localePt);
         MatSelectModule
     ],
     providers: [
-        {provide: LOCALE_ID, useValue: 'pt' }
+        {provide: LOCALE_ID, useValue: 'pt'}
     ],
     bootstrap: [AppComponent]
 })
