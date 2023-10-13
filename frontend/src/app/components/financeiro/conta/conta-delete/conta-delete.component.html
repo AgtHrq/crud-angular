@@ -1,0 +1,26 @@
+<mat-card>
+    <div class="form-container">
+        <form>
+            <mat-card-title>Excluir Conta</mat-card-title>
+            <mat-form-field>
+                <mat-label>Id</mat-label>
+                <input matInput [(ngModel)]="conta.id" disabled name="id">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Agência</mat-label>
+                <input matInput [(ngModel)]="conta.numAgencia" disabled name="agencia">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Conta</mat-label>
+                <input matInput [(ngModel)]="conta.numConta" disabled name="conta">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Saldo</mat-label>
+                <input matInput [(ngModel)]="conta.saldo" disabled name="saldo">
+            </mat-form-field>
+        </form>
+    
+        <button mat-raised-button color="warn" (click)="deletaConta()">Excluir</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+</mat-card>

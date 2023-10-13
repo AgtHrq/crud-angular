@@ -11,6 +11,8 @@ import { UserUpdateComponent } from './components/user/user-update/user-update.c
 import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
 import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view.component';
 import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component';
+import { ContaDeleteComponent } from './components/financeiro/conta/conta-delete/conta-delete.component';
+import { ContaUpdateComponent } from './components/financeiro/conta/conta-update/conta-update.component';
 
 const routes: Routes = [{
   path: "",
@@ -55,6 +57,14 @@ const routes: Routes = [{
 {
   path: "financeiro/conta/create",
   component: ContaCreateComponent
+},
+{
+  path: "financeiro/conta/delete/:id", 
+  component: ContaDeleteComponent
+},
+{
+  path: "financeiro/conta/update/:id",
+  component: ContaUpdateComponent
 },
 ];
 

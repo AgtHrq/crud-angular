@@ -9,7 +9,7 @@ import { User } from './user-create/user.model';
 })
 export class UserService {
 
-  baseUrl = 'http://localhost:8080/treinamento/usuario'
+  baseUrl = 'http://localhost:8081/treinamento/usuario'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

@@ -44,6 +44,11 @@ import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component'
 import {MatSelectModule} from '@angular/material/select';
+import { ContaReadComponent } from './components/financeiro/conta/conta-read/conta-read.component';
+import { ContaUpdateComponent } from './components/financeiro/conta/conta-update/conta-update.component';
+import { ContaDeleteComponent } from './components/financeiro/conta/conta-delete/conta-delete.component';
+import { EnderecoReadComponent } from './components/financeiro/endereco/endereco-read/endereco-read.component';
+import { MatIconModule } from '@angular/material/icon';
 
 registerLocaleData(localePt)
 
@@ -66,7 +71,11 @@ registerLocaleData(localePt)
     UserDeleteComponent,
     UserUpdateComponent,
     FinanceiroViewComponent,
-    ContaCreateComponent
+    ContaCreateComponent,
+    ContaReadComponent,
+    ContaUpdateComponent,
+    ContaDeleteComponent,
+    EnderecoReadComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +97,8 @@ registerLocaleData(localePt)
     MatTooltipModule,
     MatSlideToggleModule,
     MatExpansionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule
   ],
   providers: [{
     provide: LOCALE_ID,

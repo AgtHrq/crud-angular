@@ -14,7 +14,8 @@ export class ContaCreateComponent implements OnInit {
   conta: Conta = {
     idUsuario: 0,
     numAgencia: '',
-    numConta: ''
+    numConta: '',
+    saldo: 0
   }
 
   selectedValue: string | null = null;

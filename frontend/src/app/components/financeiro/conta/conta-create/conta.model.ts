@@ -3,4 +3,6 @@ export interface Conta {
     idUsuario: number
     numAgencia: string
     numConta: string
+    saldo: number
+    bloqueado?: boolean
 }

@@ -1,0 +1,7 @@
+a {
+    cursor: pointer;
+}
+
+.mat-column-action a {
+    margin-left: 1rem;
+}
