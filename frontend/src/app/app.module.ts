@@ -44,6 +44,8 @@ import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component'
 import {MatSelectModule} from '@angular/material/select';
+import { ContaReadComponent } from './components/financeiro/conta/conta-read/conta-read.component';
+import { ContaCrudComponent } from './views/conta-crud/conta-crud.component';
 
 registerLocaleData(localePt)
 
@@ -66,7 +68,9 @@ registerLocaleData(localePt)
     UserDeleteComponent,
     UserUpdateComponent,
     FinanceiroViewComponent,
-    ContaCreateComponent
+    ContaCreateComponent,
+    ContaReadComponent,
+    ContaCrudComponent
   ],
   imports: [
     BrowserModule,

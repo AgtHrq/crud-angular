@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Conta } from './conta-create/conta.model';
 import { HttpClient } from '@angular/common/http';
+import { __read } from 'tslib';
 
 @Injectable({
   providedIn: 'root'
@@ -17,3 +18,8 @@ export class ContaService {
   }
 
 }
+
+
+// readAll(): Observable<conta[]> {
+//   return this.http.get<Conta[]>(`${this.baseUrl}/all`)
+// }

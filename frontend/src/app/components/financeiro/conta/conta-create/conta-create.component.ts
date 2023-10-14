@@ -11,10 +11,11 @@ import { ContaService } from '../conta.service';
 })
 export class ContaCreateComponent implements OnInit {
 
-  conta: Conta = {
+conta: Conta = {
     idUsuario: 0,
     numAgencia: '',
-    numConta: ''
+    numConta: '',
+    saldo:''
   }
 
   selectedValue: string | null = null;
