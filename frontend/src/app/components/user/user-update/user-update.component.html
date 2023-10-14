@@ -1,0 +1,23 @@
+<mat-card>
+    <div class = form-container>
+        <form>
+            <mat-card-title>Atualizar Dados do Usuário</mat-card-title>
+            <mat-form-field>
+                <input matInput placeholder="Nome" [(ngModel)]="user.nome" name="nome" matTooltip="Nome do Usuário">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="CPF - 11 dígitos" [(ngModel)]="user.cpf" name="cpf" matTooltip="CPF com 11 dígitos">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="RG - 9 dígitos" [(ngModel)]="user.rg" name="rg" matTooltip="RG com 9 dígitos">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Renda Anual - R$" [(ngModel)]="user.rendaAnual" name="rendaAnual" matTooltip="Renda Anual em R$" >
+            </mat-form-field>
+        </form>
+    
+        <button mat-raised-button color="primary" (click)="updateUser()">Atualizar</button>
+        <button mat-raised-button (click)="cancelar()">Cancelar</button>
+    </div>
+    
+</mat-card>

@@ -1,0 +1,15 @@
+<mat-card class = delete-container>
+    <div class = delete-conta>
+        <mat-card-title>Deseja Encerrar a Conta?</mat-card-title>
+        
+        <mat-card-content> ID : {{conta.id}}</mat-card-content>
+        <mat-card-content> Agência: {{conta.numAgencia}} </mat-card-content>
+        <mat-card-content> Número da Conta : {{conta.numConta}}</mat-card-content>
+        <mat-card-content> Saldo da Conta : {{conta.saldo}}</mat-card-content>
+    </div>
+    <div class="botoes">
+        <button mat-raised-button color="primary" (click)="deleteConta()">Encerrar Conta</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+
+</mat-card>

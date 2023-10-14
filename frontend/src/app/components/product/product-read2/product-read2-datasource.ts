@@ -10,6 +10,8 @@ export interface ProductRead2Item {
   id: number;
 }
 
+
+
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: ProductRead2Item[] = [
   {id: 1, name: 'Hydrogen'},

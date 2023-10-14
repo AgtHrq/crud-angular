@@ -12,13 +12,45 @@
     },
     {
       "name": "Geladeira",
-      "price": "1299.99",
+      "price": 1299.99,
       "id": 3
     },
     {
       "name": "Gadjonhas 2.0",
       "price": 125.5,
       "id": 4
+    },
+    {
+      "name": "Abobrinha",
+      "price": 17,
+      "id": 5
+    },
+    {
+      "name": "Espada de Diamante",
+      "price": 499.95,
+      "id": 6
+    },
+    {
+      "name": "Cachorro Quente",
+      "price": 12.5,
+      "id": 7
+    },
+    {
+      "name": "Bolhufas",
+      "price": 23.99,
+      "id": 8
+    },
+    {
+      "name": "Djanho",
+      "price": 33.33,
+      "id": 9
+    },
+    {
+      "nome": "Tonho das pedras",
+      "cpf": "12345678910",
+      "rg": "123456789",
+      "rendaAnual": "15000",
+      "id": 10
     }
   ]
 }

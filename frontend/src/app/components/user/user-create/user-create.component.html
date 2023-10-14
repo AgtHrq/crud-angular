@@ -1,0 +1,23 @@
+<mat-card>
+    <div class = form-container>
+        <form>
+            <mat-card-title>Cadastrar Novo Usuário</mat-card-title>
+            <mat-form-field>
+                <input matInput placeholder="Nome" [(ngModel)]="user.nome" name="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="CPF - 11 dígitos" [(ngModel)]="user.cpf" name="cpf">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="RG - 9 dígitos" [(ngModel)]="user.rg" name="rg">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Renda Anual - R$" [(ngModel)]="user.rendaAnual" name="rendaAnual">
+            </mat-form-field>
+        </form>
+    
+        <button mat-raised-button color="primary" (click)="createUser()">Salvar</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+    
+</mat-card>

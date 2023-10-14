@@ -32,6 +32,20 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { UserCrudComponent } from './views/user-crud/user-crud.component';
+import { UserCreateComponent } from './components/user/user-create/user-create.component';
+import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
+import { UserReadComponent } from './components/user/user-read/user-read.component';
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view.component'
+import { MatExpansionModule } from '@angular/material/expansion';
+import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component';
+import { MatSelectModule } from '@angular/material/select';
+import { ContaDeleteComponent } from './components/financeiro/conta/conta-delete/conta-delete.component';
+import { ContaUpdateComponent } from './components/financeiro/conta/conta-update/conta-update.component';
+
 registerLocaleData(localePt)
 
 
@@ -47,7 +61,16 @@ registerLocaleData(localePt)
     ProductReadComponent,
     ProductRead2Component,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    UserCrudComponent,
+    UserCreateComponent,
+    UserDeleteComponent,
+    UserReadComponent,
+    UserUpdateComponent,
+    FinanceiroViewComponent,
+    ContaCreateComponent,
+    ContaDeleteComponent,
+    ContaUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +88,11 @@ registerLocaleData(localePt)
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatTooltipModule,
+    MatSlideToggleModule,
+    MatExpansionModule,
+    MatSelectModule
     
   ],
   providers: [{

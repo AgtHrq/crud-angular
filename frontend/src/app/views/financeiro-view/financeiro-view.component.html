@@ -1,0 +1,107 @@
+<mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Conta
+        </mat-panel-title>
+        <mat-panel-description>
+          Crie, edite e faça operações com sua conta.
+        </mat-panel-description>
+      </mat-expansion-panel-header>  
+      <button mat-raised-button color="primary" (click)="navigateToAddConta()">Criar Nova Conta</button>
+      <mat-card>
+        <mat-card-title>Contas cadastradas:</mat-card-title>
+              
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource" matSort>
+              <!-- Id conta Column -->
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Id da Conta</th>
+                <td mat-cell *matCellDef="let row">{{row.id}}</td>
+              </ng-container>
+          
+              <!-- Agencia Column -->
+              <ng-container matColumnDef="numAgencia">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Agência</th>
+                <td mat-cell *matCellDef="let row">{{row.numAgencia}}</td>
+              </ng-container>
+
+              <!-- Conta Column -->
+              <ng-container matColumnDef="numConta">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Número da Conta</th>
+                <td mat-cell *matCellDef="let row">{{row.numConta}}</td>
+              </ng-container>
+  
+              <!-- Saldo Column -->
+              <ng-container matColumnDef="saldo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Saldo</th>
+                <td mat-cell *matCellDef="let row">{{row.saldo | currency: 'BRL'}}</td>
+              </ng-container>
+  
+              <!-- bloqueado Column -->
+              <ng-container matColumnDef="bloqueado">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Conta Bloqueada</th>
+                <td mat-cell *matCellDef="let row">
+                  <mat-slide-toggle color='primary' (click)="alterarEstadoBloqueio(row)" [checked]="row.bloqueado"></mat-slide-toggle>
+                </td>
+              </ng-container>
+    
+              <!-- Action Column -->
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef>Ações</th>
+                <td mat-cell *matCellDef="let row">
+                    <a routerLink="conta/update/{{row.id}}" class="edit" matTooltip="Atualizar Conta">
+                      <i class="material-icons">
+                        edit
+                      </i>
+                    </a>
+                    <a routerLink="conta/delete/{{row.id}}" class="delete" matTooltip="Encerrar Conta">
+                      <i class="material-icons">
+                        delete
+                      </i>
+                    </a>
+                </td>
+              </ng-container>
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            
+              
+    
+            </table>
+            <mat-paginator #paginator
+                [length]="contas.length"
+                [pageIndex]="0"
+                [pageSize]="5"
+                [pageSizeOptions]="[5, 10, 20]"
+                aria-label="Select page">
+            </mat-paginator>
+          
+          </div>
+      </mat-card>
+    </mat-expansion-panel>
+    
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Endereço
+        </mat-panel-title>
+        <mat-panel-description>
+          Administre seus endereços
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Histórico de Transações
+          </mat-panel-title>
+          <mat-panel-description>
+            Histórico com todas as transações do sistema.
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+  </mat-accordion>
+  

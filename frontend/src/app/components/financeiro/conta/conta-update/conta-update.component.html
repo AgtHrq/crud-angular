@@ -1,0 +1,23 @@
+<mat-card>
+    <div class = form-container>
+        <form>
+            <mat-card-title>Atualizar Dados da Conta</mat-card-title>
+            <mat-form-field>
+                <input matInput placeholder="Id da Conta" [(ngModel)]="conta.id" name="id" disabled>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Agencia - 5 digitos" [(ngModel)]="conta.numAgencia" name="numAgencia" matTooltip="Número da Agência com 5 dígitos">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Número da conta - 7 dígitos" [(ngModel)]="conta.numConta" name="numConta" matTooltip="Número da Conta com 7 dígitos" >
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Saldo - R$" [(ngModel)]="conta.saldo" name="saldo" matTooltip="Saldo da Conta em R$">
+            </mat-form-field>
+        </form>
+    
+        <button mat-raised-button color="primary" (click)="updateConta()">Atualizar</button>
+        <button mat-raised-button (click)="cancelar()">Cancelar</button>
+    </div>
+    
+</mat-card>

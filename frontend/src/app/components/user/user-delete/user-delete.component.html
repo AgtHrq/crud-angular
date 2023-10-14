@@ -1,0 +1,15 @@
+<mat-card class = delete-container>
+    <div class = delete-usuario>
+        <mat-card-title>Remover o Usuário?</mat-card-title>
+        
+        <mat-card-content> ID : {{user.id}}</mat-card-content>
+        <mat-card-content> Nome: {{user.nome}} </mat-card-content>
+        <mat-card-content> CPF: {{user.cpf}}</mat-card-content>
+        <mat-card-content> RG: {{user.rg}}</mat-card-content>
+    </div>
+    <div class="botoes">
+        <button mat-raised-button color="primary" (click)="deleteUser()">Remover</button>
+        <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+
+</mat-card>
