@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Conta } from './conta.model';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/components/user/user.service';
-import { ContaService } from '../conta.service';
+import { ContaService } from 'src/app/components/financeiro/conta/conta.service';
 
 @Component({
   selector: 'app-conta-create',
@@ -14,7 +14,9 @@ export class ContaCreateComponent implements OnInit {
   conta: Conta = {
     idUsuario: 0,
     numAgencia: '',
-    numConta: ''
+    numConta: '',
+    saldo: 0,
+
   }
 
   selectedValue: string | null = null;

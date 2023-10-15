@@ -36,14 +36,20 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
 import { UserReadComponent } from './components/user/user-read/user-read.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view.component';
 
 import {MatExpansionModule} from '@angular/material/expansion';
-import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component'
 import {MatSelectModule} from '@angular/material/select';
+
+import { ContaCrudComponent } from './views/conta-crud/conta-crud.component';
+import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component'
+import { ContaReadComponent } from './components/financeiro/conta/conta-read/conta-read.component';
+import { ContaUpdateComponent } from './components/financeiro/conta/conta-update/conta-update.component';
+import { ContaDeleteComponent } from './components/financeiro/conta/conta-delete/conta-delete.component';
 
 registerLocaleData(localePt)
 
@@ -66,7 +72,11 @@ registerLocaleData(localePt)
     UserDeleteComponent,
     UserUpdateComponent,
     FinanceiroViewComponent,
-    ContaCreateComponent
+    ContaCreateComponent,
+    ContaReadComponent,
+    ContaUpdateComponent,
+    ContaCrudComponent,
+    ContaDeleteComponent,
   ],
   imports: [
     BrowserModule,

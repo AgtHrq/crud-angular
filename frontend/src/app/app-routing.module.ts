@@ -10,7 +10,12 @@ import { UserCreateComponent } from './components/user/user-create/user-create.c
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
 import { FinanceiroViewComponent } from './views/financeiro-view/financeiro-view.component';
+
+import { ContaCrudComponent } from './views/conta-crud/conta-crud.component';
 import { ContaCreateComponent } from './components/financeiro/conta/conta-create/conta-create.component';
+import { ContaUpdateComponent } from './components/financeiro/conta/conta-update/conta-update.component';
+import { ContaDeleteComponent } from './components/financeiro/conta/conta-delete/conta-delete.component';
+
 
 const routes: Routes = [{
   path: "",
@@ -53,8 +58,20 @@ const routes: Routes = [{
   component: FinanceiroViewComponent
 },
 {
-  path: "financeiro/conta/create",
+  path: "contas",
+  component: ContaCrudComponent
+},
+{
+  path: "contas/create",
   component: ContaCreateComponent
+},
+{
+  path: "contas/update/:id",
+  component: ContaUpdateComponent
+},
+{
+  path: "contas/delete/:id",
+  component: ContaDeleteComponent
 },
 ];
 

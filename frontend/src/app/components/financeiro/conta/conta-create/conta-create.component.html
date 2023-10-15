@@ -16,6 +16,9 @@
             <mat-form-field>
                 <input matInput placeholder="Número da Conta" [(ngModel)]="conta.numConta" name="numeroConta">
             </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="saldo" [(ngModel)]="conta.saldo" name="saldo">
+          </mat-form-field>
         </form>
     
         <button mat-raised-button color="primary" (click)="createConta()">Salvar</button>
